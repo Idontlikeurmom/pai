@@ -3,16 +3,17 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pai-lang"
+name = "pailang"
 version = "1.0.0"
-description = "A small, English-like programming language with AI built into the syntax."
+authors = [{ name = "Idontlikeurmom" }]
+description = "A small, English-like programming language with AI model training built into the syntax."
 readme = "README.md"
 requires-python = ">=3.9"
-license = { file = "LICENSE" }
-keywords = ["programming-language", "interpreter", "ai", "education", "dsl"]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["programming-language", "interpreter", "ai", "machine-learning", "education", "dsl", "llm"]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Topic :: Software Development :: Interpreters",
     "Intended Audience :: Education",
 ]
@@ -24,6 +25,10 @@ ai = ["torch"]
 
 [project.scripts]
 pai = "cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Idontlikeurmom/pai"
+Repository = "https://github.com/Idontlikeurmom/pai"
 
 [tool.setuptools]
 py-modules = ["pai", "cli"]

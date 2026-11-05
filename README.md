@@ -25,7 +25,16 @@ train "my_model.pt"
 
 ## Install & run
 
-No install needed — clone and run:
+From PyPI (the core language):
+
+```bash
+pip install pailang
+pai examples/hello.pai
+pai --version
+```
+
+Or clone the repo — no install needed, and this is how you also get the AI
+training commands (`train` / `run` / `teach`) and the examples:
 
 ```bash
 git clone https://github.com/Idontlikeurmom/pai.git
