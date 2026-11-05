@@ -1,0 +1,19 @@
+-- ai_model.pai - PAI treats AI as part of the language.
+-- The AI commands use a local Ollama server (https://ollama.com).
+-- Run this from the cloned repo so the plugins/ folder is available.
+
+-- Ask the model a question right inside your program:
+let fact = ai("Give me one short fun fact about octopuses.")
+say fact
+
+-- Train a model from a dataset file (JSON / JSONL / CSV / TXT):
+train "my_model.pt"
+  dataset "qa.json"
+  env "Local"
+  end "15:00, EST"
+
+-- Serve a chat page for a model you have:
+run "my_model.pt"
+  name "My Model"
+  creator "Your Name"
+  host localhost:8080

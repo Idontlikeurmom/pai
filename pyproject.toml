@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pai-lang"
+version = "1.0.0"
+description = "A small, English-like programming language with AI built into the syntax."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+keywords = ["programming-language", "interpreter", "ai", "education", "dsl"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Interpreters",
+    "Intended Audience :: Education",
+]
+
+# The core language is pure standard library (no dependencies).
+# Training (train/run/teach) needs PyTorch; the ai() builtin uses a local Ollama server.
+[project.optional-dependencies]
+ai = ["torch"]
+
+[project.scripts]
+pai = "cli:main"
+
+[tool.setuptools]
+py-modules = ["pai", "cli"]

@@ -1,0 +1,18 @@
+-- hello.pai - a first taste of PAI
+
+let name = "world"
+say f"Hello, {name}!"
+
+-- a function with a default argument
+func greet(who, greeting="Hi"):
+    return f"{greeting}, {who}!"
+
+for who in ["Ada", "Linus", "Grace"]:
+    say greet(who, greeting="Hello")
+
+-- lists, slices and built-ins
+let nums = [5, 3, 8, 1, 9]
+say "sorted:", sorted(nums)
+say "first two:", nums[:2]
+say "reversed:", nums[::-1]
+say "sum:", sum(nums), "max:", max(nums)
